@@ -13,26 +13,27 @@ Use **Pencil MCP** to design a new homepage for the company described below.
 
 ## 2. Project Information
 
-| Field | Value |
-| --- | --- |
-| Industry | `[Industry]` |
-| Company name | `[Company Name]` |
-| Website URL | `[Website URL]` |
-| Company description | `[Description]` |
-| Primary company highlight | `[Highlight]` |
+| Field                     | Value            |
+| ------------------------- | ---------------- |
+| Industry                  | `[Industry]`     |
+| Company name              | `[Company Name]` |
+| Website URL               | `[Website URL]`  |
+| Company description       | `[Description]`  |
+| Primary company highlight | `[Highlight]`    |
 
 ### SEO Keywords
 
-- `[Keyword 1]`
-- `[Keyword 2]`
+`["keyword one", "keyword two", "keyword three"]`
+
+Act as a `[Expert Field]` expert with deep knowledge of the `[Industry]` industry. Write concise, compelling, customer-focused content with one clear message per section.
 
 ## 3. Contact Information
 
-| Channel | Details |
-| --- | --- |
-| Trụ sở chính | `[Address]` |
-| Email | `[Email]` |
-| Điện thoại / Zalo | `[Phone]` |
+| Channel           | Details     |
+| ----------------- | ----------- |
+| Trụ sở chính      | `[Address]` |
+| Email             | `[Email]`   |
+| Điện thoại / Zalo | `[Phone]`   |
 
 ## 4. Design-System Requirements
 
