@@ -58,7 +58,7 @@ The homepage should:
 ## 6. Deliverables
 
 - A complete homepage design in Pencil.
-- Desktop and mobile layouts.
+- Desktop only layout.
 - A short Markdown report containing:
   - Every existing theme variable whose value was changed.
   - Every new theme variable added.
