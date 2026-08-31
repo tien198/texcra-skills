@@ -14,9 +14,8 @@ Use this structure for pages composed of multiple substantial sections:
         ├── index.tsx
         ├── comps/
         │   ├── <section-part>.tsx
-        │   └── <section-name>-motion.tsx
         └── hooks/
-            └── use-<section-name>-motion.ts
+            └── <section-name>-hook-name.ts
 ```
 
 - Keep `page.tsx` thin. It should own route metadata, route-level data loading, and section composition in reading order.
@@ -32,7 +31,7 @@ Use this structure for pages composed of multiple substantial sections:
 - Keep pages, layouts, section entry points, and static presentational components as Server Components by default.
 - Add `"use client"` only to files that require hooks, event handlers, browser APIs, or client-only libraries. Do not mark an entire page or section as a Client Component for one interactive behavior.
 - Isolate interactivity in the smallest practical Client Component and compose it from server-rendered content where possible.
-- For animated sections, use a thin client `<SectionName>Motion>` component that owns the root ref and animation hook while receiving server-rendered section markup through `children`.
+- For animated sections, use a thin client `<SectionName>-mtion>` component that owns the root ref and animation hook while receiving server-rendered section markup through `children`.
 - Props crossing into a Client Component must be React-serializable. Passing already-rendered `children` is the preferred boundary for motion wrappers.
 - Before changing routing, metadata, caching, data fetching, or Server/Client composition, read the relevant installed guide in `node_modules/next/dist/docs/` as required by the repository-level `AGENTS.md`.
 

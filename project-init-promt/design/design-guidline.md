@@ -6,7 +6,6 @@
 
 Use **Pencil MCP** to design a new homepage for the company described below.
 
-- Review the current website: `[Website URL]`
 - Use **Vietnamese** for all customer-facing content.
 - Follow the established web UI and existing project conventions.
 - Make **light mode** the default experience.
@@ -23,7 +22,7 @@ Use **Pencil MCP** to design a new homepage for the company described below.
 
 ### SEO Keywords
 
-`["keyword one", "keyword two", "keyword three"]`
+`[SEO Keywords]`
 
 Act as a `[Expert Field]` expert with deep knowledge of the `[Industry]` industry. Write concise, compelling, customer-focused content with one clear message per section.
 
@@ -53,7 +52,7 @@ The homepage should:
 - Build credibility and make the primary customer action obvious.
 - Incorporate the target SEO keywords naturally into headings and body copy.
 - Present contact options clearly, especially phone and Zalo.
-- Be responsive and visually consistent across desktop and mobile layouts.
+- Use a desktop composition that can be adapted cleanly to mobile during implementation.
 
 ## 6. Deliverables
 
@@ -70,4 +69,4 @@ The homepage should:
 - Keep the interface in Vietnamese.
 - Keep light mode as the default.
 - Maintain accessible contrast and legible typography.
-- Do not invent company facts; retain placeholders wherever information has not been provided.
+- Do not invent company facts; return to the required-input gate if a required value is missing.
