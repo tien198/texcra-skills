@@ -1,40 +1,48 @@
-# Codex
+# Agent data map
 
-- Historical chat sessions: /home/tien/.codex/sessions/
-- Archived sessions: /home/tien/.codex/archived_sessions/
-- History indexes: /home/tien/.codex/history.jsonl and /home/tien/.codex/session_index.jsonl
+## Codex
 
-# spreadsheets plugin
-cd ~/.codex/plugins/cache/openai-primary-runtime/spreadsheets/
+```text
+~/.codex/
+├── sessions/                 # Historical chat sessions
+├── archived_sessions/        # Archived chat sessions
+├── history.jsonl             # History index
+└── session_index.jsonl       # Session index
+```
 
+## Spreadsheets plugin
 
+```text
+~/.codex/plugins/cache/openai-primary-runtime/spreadsheets/
+```
 
-  ### 1. Đường dẫn thư mục chính
+## Antigravity CLI
 
-  • Thư mục ứng dụng Antigravity:
-      • ~/.gemini/antigravity-cli/
-      • (Đường dẫn tuyệt đối: /home/tien/.gemini/antigravity-cli/)
+### Overview
 
-  ──────
-  ### 2. Đường dẫn quản lý lịch sử và Logs
+```text
+~/.gemini/antigravity-cli/
+├── brain/                              # Session logs and artifacts
+│   └── <conversation-id>/              # Artifacts for one conversation
+│       └── .system_generated/logs/
+│           ├── transcript.jsonl        # Conversation transcript
+│           └── transcript_full.jsonl   # Full conversation transcript
+├── conversations/                      # Per-conversation SQLite databases
+│   └── <conversation-id>.db            # Database for one conversation
+└── conversation_summaries.db           # Conversation list/summary index
+```
 
-  • Thư mục chứa logs và artifacts của các phiên:
-      • ~/.gemini/antigravity-cli/brain/
-      • (Đường dẫn tuyệt đối: /home/tien/.gemini/antigravity-cli/brain/)
-  • File log chi tiết theo từng phiên (<conversation-id>):
-      • ~/.gemini/antigravity-cli/brain/<conversation-id>/.system_generated/logs/transcript.jsonl
-      • ~/.gemini/antigravity-cli/brain/<conversation-id>/.system_generated/logs/transcript_full.jsonl
-  • Thư mục artifacts của từng phiên:
-      • ~/.gemini/antigravity-cli/brain/<conversation-id>/
+### Quick lookup
 
-  ──────
-  ### 3. Đường dẫn Database lưu trữ
+| Looking for | Location |
+|---|---|
+| Application directory | `~/.gemini/antigravity-cli/` |
+| Logs and session artifacts | `~/.gemini/antigravity-cli/brain/` |
+| Artifacts for one session | `~/.gemini/antigravity-cli/brain/<conversation-id>/` |
+| Detailed session log | `~/.gemini/antigravity-cli/brain/<conversation-id>/.system_generated/logs/transcript.jsonl` |
+| Full session log | `~/.gemini/antigravity-cli/brain/<conversation-id>/.system_generated/logs/transcript_full.jsonl` |
+| Per-session databases | `~/.gemini/antigravity-cli/conversations/` |
+| Database for one session | `~/.gemini/antigravity-cli/conversations/<conversation-id>.db` |
+| Conversation summary index | `~/.gemini/antigravity-cli/conversation_summaries.db` |
 
-  • Thư mục database SQLite của từng phiên:
-      • ~/.gemini/antigravity-cli/conversations/
-      • (File từng phiên: ~/.gemini/antigravity-cli/conversations/<conversation-id>.db)
-  • File database tóm tắt/index danh sách các phiên:
-      • ~/.gemini/antigravity-cli/conversation_summaries.db
-      • (Đường dẫn tuyệt đối: /home/tien/.gemini/antigravity-cli/conversation_summaries.db)
-
-
+Replace `<conversation-id>` with the ID of the conversation you want to inspect.
