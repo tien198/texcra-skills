@@ -31,7 +31,7 @@ Determine the requested implementation option from the user's prompt. If it is u
 
 1. **Localization:** read and follow only [implement/transcribe.md](implement/transcribe.md).
 2. **Font and theme synchronization:** read and follow only [implement/font-synchronus.md](implement/font-synchronus.md).
-3. **Core UI:** implement structure, components, styling, and assets from Pencil.
+3. **Core UI:** implement structure, components, styling, and assets from Pencil, if the project is building on NextJS, reference [app-router-structure-instruction.md](implement/app-router-structure-instruction.md). If the project is building on TanStack Start, reference the Tanstack Intent
 
 Execute only the selected options. Do not read references for unselected options. If multiple options are selected, complete and verify each separately; never mix localization edits with font/theme edits.
 

@@ -60,17 +60,6 @@ Use this structure for pages composed of multiple substantial sections:
 - Preserve the project's existing maximum content widths and horizontal gutters unless the design calls for a deliberate exception.
 - Use class composition utilities already present in the repository when conditional classes become difficult to read.
 
-## Motion contract
-
-- Keep animation implementation in `hooks/use-<section-name>-motion.ts`; motion wrappers should only create the root ref, call the hook, and render layout around `children`.
-- Scope all selectors and animation work to the owning component's root. Use descriptive `data-<feature>-*` attributes as the stable contract between markup and motion code; do not target styling classes.
-- When reveal order matters, keep `data-reveal-order` values explicit and sort selected elements before animating them.
-- For GSAP, use `useGSAP` with `{ scope: rootRef }`, use `gsap.matchMedia()` for responsive behavior, and revert created media contexts during cleanup.
-- Register every GSAP plugin used by a hook. Keep `ScrollTrigger` configuration inside the hook that owns the animated section.
-- Every initially hidden element must include a reduced-motion visible state. Make the motion root visible before returning from a reduced-motion branch.
-- Prefer transforms and opacity. Clear temporary transform, visibility, and `will-change` properties after entrance animations.
-- If markup adds, removes, or renames a motion data attribute, update the matching hook in the same change.
-
 ## Adding or changing a route section
 
 1. Create `sections/<section-name>/index.tsx` with semantic, server-rendered content.
